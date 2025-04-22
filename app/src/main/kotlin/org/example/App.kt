@@ -10,6 +10,8 @@ fun main(){
     val tipo=tipoNumero(numero)
     println(par)
     println(tipo)
+    mostrarNumerosConLoops()
+    numerosPares()
 }
 
 fun nombre(){
@@ -51,3 +53,43 @@ fun tipoNumero(numero: Int): String {
         else -> "Cero"
     }
 }
+//----------------------------
+fun mostrarNumerosConLoops() {
+    // Usando for
+    println("Usando for:")
+    for (i in 1..10) {
+        println(i)
+    }
+    
+    // Usando while
+    println("\nUsando while:")
+    var j = 1
+    while (j <= 10) {
+        println(j)
+        j++
+    }
+    
+    // Usando do-while
+    println("\nUsando do-while:")
+    var k = 1
+    do {
+        println(k)
+        k++
+    } while (k <= 10)
+}
+
+//Crear una función que muestre los números pares del 2 al 20 usando los tres tipos de loops
+
+fun numerosPares(){
+    println("Números pares usando for: ")
+    for (i in 2..20 step 2){
+        println(i)
+    }
+    println("Números pares usando while: ")
+    var contador: Int = 2
+    while (contador < 20){
+        val resultadoContador =if (contador %2==0) println(resultadoContador)
+        contador++
+    }
+}
+
