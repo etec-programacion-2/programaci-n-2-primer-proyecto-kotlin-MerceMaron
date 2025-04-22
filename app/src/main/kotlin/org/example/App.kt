@@ -5,12 +5,17 @@ fun main(){
     nombre()
     mostrarTiposDeDatos()
     area()
+    val numero: Int = 4
+    val par=esParOImpar(numero)
+    val tipo=tipoNumero(numero)
+    println(par)
+    println(tipo)
 }
 
 fun nombre(){
     println ("Mi nombre es Mercedes Marón. Hoy es 22 de abril de 2025.")
 }
-
+//------------------------------
 fun mostrarTiposDeDatos() {
     val nombre: String = "Juan"
     val edad: Int = 25
@@ -28,6 +33,21 @@ fun area(){
     val altura: Double = 75.06
     val resultado= base*altura
 
-
     println ("El área del rectángulo es: $resultado")
+}
+//------------------------------------
+
+fun esParOImpar(numero: Int): String {
+    return when {
+        numero % 2 == 0 -> "Par"
+        else -> "Impar"
+    }
+}
+
+fun tipoNumero(numero: Int): String {
+    return when {
+        numero < 0 -> "Negativo"
+        numero > 0 -> "Positivo"
+        else -> "Cero"
+    }
 }
