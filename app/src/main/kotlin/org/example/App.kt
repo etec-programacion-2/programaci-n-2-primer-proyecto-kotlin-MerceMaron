@@ -12,6 +12,9 @@ fun main(){
     println(tipo)
     mostrarNumerosConLoops()
     numerosPares()
+
+    exponente()
+
 }
 
 fun nombre(){
@@ -99,3 +102,21 @@ fun numerosPares(){
 }
 
 //--------------------------------
+
+
+//Crear una función que calcule la potencia de un número (base elevada a exponente)
+
+
+fun exponente (): Int {
+    var a = 2 // base
+    var b = 5 // exponente
+    var c = 1
+    var resultado=1
+    println("El resultado de la potencia es:")
+    do {
+        resultado=resultado*a
+        println(resultado)
+        c++
+    } while (b>=c)
+    return resultado
+}
