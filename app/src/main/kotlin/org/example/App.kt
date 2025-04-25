@@ -12,8 +12,10 @@ fun main(){
     println(tipo)
     mostrarNumerosConLoops()
     numerosPares()
-
+    factorial(n)
+    saludar(nombre, edad)
     exponente()
+    valorGrandePequeño()
 
 }
 
@@ -103,8 +105,16 @@ fun numerosPares(){
 
 //--------------------------------
 
+var n=3
+fun factorial(n: Int): Int {
+    return if (n <= 1) 1 else n * factorial(n - 1)
+}
 
-//Crear una función que calcule la potencia de un número (base elevada a exponente)
+var nombre="Merce"
+var edad=16
+fun saludar(nombre: String, edad: Int = 0) {
+    println("Hola $nombre, tienes $edad años")
+}
 
 
 fun exponente (): Int {
@@ -119,4 +129,24 @@ fun exponente (): Int {
         c++
     } while (b>=c)
     return resultado
+}
+
+//-----------------------------------
+
+
+//Crear una función que encuentre el número más grande y el más pequeño en una lista de números, usando variables locales para almacenar estos valores durante el proceso
+
+fun valorGrandePequeño(){
+    val numeros = arrayOf(1, 2, 3, 4, 5, 6, 7)
+    println("Los numeros más grande y pequeño son: ")
+    var numeroGrande=0
+    var numeroPequeño=0
+    for (i in 0..numeros.size-2){
+        if (numeros[i] < numeros[i+1]) numeroGrande=numeros[i+1] else numeroGrande=numeros[i]
+    }
+    for (i in 0..numeros.size-2){
+        if (numeros[i] > numeros[i+1]) numeroPequeño=numeros[i+1] else  numeroPequeño=numeros[i]
+    }
+    println(numeroGrande)
+    println(numeroPequeño)
 }
