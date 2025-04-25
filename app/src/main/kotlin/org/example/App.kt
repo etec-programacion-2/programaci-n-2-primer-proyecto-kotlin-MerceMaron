@@ -78,7 +78,6 @@ fun mostrarNumerosConLoops() {
     } while (k <= 10)
 }
 
-//Crear una función que muestre los números pares del 2 al 20 usando los tres tipos de loops
 
 fun numerosPares(){
     println("Números pares usando for: ")
@@ -87,9 +86,16 @@ fun numerosPares(){
     }
     println("Números pares usando while: ")
     var contador: Int = 2
-    while (contador < 20){
-        val resultadoContador =if (contador %2==0) println(resultadoContador)
+    while (contador <= 20){
+        if (contador %2==0) println(contador)
         contador++
     }
+    println("Números pares usando do-while: ")
+    var a = 2 
+    do {
+        println(a)
+        a=a+2
+    } while (a <= 20)
 }
 
+//--------------------------------
