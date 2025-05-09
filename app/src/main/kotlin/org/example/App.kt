@@ -137,15 +137,23 @@ fun exponente (): Int {
 //Crear una función que encuentre el número más grande y el más pequeño en una lista de números, usando variables locales para almacenar estos valores durante el proceso
 
 fun valorGrandePequeño(){
-    val numeros = arrayOf(1, 2, 3, 4, 5, 6, 7)
+    val numeros = arrayOf(8, 2, 3, 4, 16, 5, 7, 6)
     println("Los numeros más grande y pequeño son: ")
     var numeroGrande=0
-    var numeroPequeño=0
+    var numeroPequeño=numeros[0]
     for (i in 0..numeros.size-2){
-        if (numeros[i] < numeros[i+1]) numeroGrande=numeros[i+1] else numeroGrande=numeros[i]
+        if (numeroGrande < numeros[i]) {
+            numeroGrande=numeros[i] 
+        } else {
+            numeroGrande=numeroGrande
+        }
     }
     for (i in 0..numeros.size-2){
-        if (numeros[i] > numeros[i+1]) numeroPequeño=numeros[i+1] else  numeroPequeño=numeros[i]
+        if (numeroPequeño > numeros[i]){
+            numeroPequeño=numeros[i]
+        } else {
+            numeroPequeño=numeroPequeño
+        }
     }
     println(numeroGrande)
     println(numeroPequeño)
